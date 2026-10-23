@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>職安題庫</title>
+<meta name="theme-color" content="#14161a" />
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" href="./icon-192.png" />
+<link rel="apple-touch-icon" href="./icon-192.png" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <h1>職安題庫</h1>
+    <div class="topbar-right">
+      <span class="streak" id="streakBadge">🔥 0</span>
+      <button class="icon-btn" id="searchBtn" aria-label="搜尋題目">🔍</button>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <nav class="bottomnav" id="bottomNav">
+    <button data-view="home" class="active"><span class="ic">🏠</span>首頁</button>
+    <button data-view="daily"><span class="ic">📅</span>每日</button>
+    <button data-view="mock"><span class="ic">⏱️</span>模擬考</button>
+    <button data-view="mole"><span class="ic">🕳️</span>打地鼠</button>
+    <button data-view="stats"><span class="ic">📊</span>統計</button>
+  </nav>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="./config.js"></script>
+<script src="./db.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
